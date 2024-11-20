@@ -1,0 +1,137 @@
+@import "../../styles/Variables/Variables.scss";
+
+.ownedNewWork_contain {
+  .licensed_header {
+    display: flex;
+    justify-content: space-between;
+    .primary_btn {
+      height: 42px;
+      border-radius: 6px;
+      padding: 5px 30px;
+    }
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: $font-semiBold;
+    color: $whitish-blue;
+    margin-bottom: 30px;
+    span {
+      color: $blue_fill_btn;
+    }
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $card-bg;
+    .card_inner {
+      gap: 15px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .card_box {
+        width: 100%;
+        background-color: $sm_card_gray;
+        border-radius: 6px;
+        padding: 20px 20px 15px 20px;
+        border: solid 1px $sm_card_gray;
+        .img_box {
+          margin-bottom: 27px;
+          -webkit-user-select: none; /* Safari */
+          -ms-user-select: none; /* IE 10 and IE 11 */
+          user-select: none; /* Standard syntax */
+        }
+        h4 {
+          font-size: 16px;
+          font-weight: $font-semiBold;
+          color: $white;
+          margin-bottom: 10px;
+          -webkit-user-select: none; /* Safari */
+          -ms-user-select: none; /* IE 10 and IE 11 */
+          user-select: none; /* Standard syntax */
+          &:hover {
+            pointer-events: none;
+          }
+        }
+        p {
+          font-size: 14px;
+          font-weight: $font-regular;
+          color: $white;
+          margin-bottom: 0px;
+          -webkit-user-select: none; /* Safari */
+          -ms-user-select: none; /* IE 10 and IE 11 */
+          user-select: none; /* Standard syntax */
+        }
+        &:hover {
+          cursor: pointer;
+          border: solid 1px $dark_bdr;
+        }
+      }
+    }
+    .primary_btn {
+      padding: 10px 42px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.Modal_contain_inner {
+  .modal_inner {
+    .inputfld {
+      height: 48px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 4px 15px;
+      margin-bottom: 6px;
+    }
+  }
+  .footer_btn {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    margin: 0;
+    margin-top: 15px;
+    .skeletal_btn {
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 25px;
+      border: 1px solid $blue_fill_btn;
+      color: $blue_fill_btn;
+      font-style: normal;
+      &:hover {
+        background-color: $blue_fill_btn_hover;
+        border: 1px solid $blue_fill_btn_hover;
+        color: $white;
+      }
+    }
+    .primary_btn {
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 25px;
+    }
+  }
+}
+
+.error_card {
+  padding: 50px 20px !important;
+  text-align: center;
+  img {
+    width: 300px;
+    margin: 0 auto;
+  }
+  h1 {
+    margin: 10px 0px;
+  }
+  p {
+    color: $white;
+    font-size: 14px;
+  }
+}

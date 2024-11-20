@@ -1,0 +1,140 @@
+@import "../../styles/Variables/Variables.scss";
+
+.Modal_contain_inner {
+  .header {
+    padding: 20px;
+
+    .title {
+      font-size: 18px !important;
+      font-weight: $font-semiBold;
+    }
+  }
+
+  .modal_body {
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+
+    .checkbox.checkbox_field {
+      display: table;
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked~.checkbox__checkmark {
+          background-color: $green;
+          border-color: $green;
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:hover input {
+        ~.checkbox__checkmark {
+          background-color: $Dark-blue-grey;
+        }
+
+        &:checked~.checkbox__checkmark {
+          background-color: $green;
+          border-color: $green;
+        }
+      }
+
+      .checkbox__checkmark {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border: solid 1px $light-grayblue;
+        transition: background-color 0.25s ease;
+        border-radius: 4px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 7px;
+          top: 3px;
+          width: 5px;
+          height: 10px;
+          border: solid $card-bg;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: opacity 0.25s ease;
+        }
+      }
+
+      .checkbox__body {
+        font-size: 14px;
+        color: $light-grayblue;
+
+        @media (max-width: 992px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .assets_list_box {
+      display: flex;
+      justify-content: space-between;
+
+      .assets_list {
+        .assets {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .normal_form {
+    width: 100%;
+    margin-bottom: 15px;
+
+    .inputfld {
+      border-color: $dark-input;
+      height: 48px;
+      border-radius: 6px;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+  }
+
+  .primary_btn {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 180px;
+    padding: 12px 22px;
+    align-items: center;
+    display: block;
+    margin:20px  auto 15px;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      padding: 9px 24px;
+    }
+  }
+
+}

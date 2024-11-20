@@ -1,0 +1,267 @@
+@import "../../styles/Variables/Variables.scss";
+
+.newWork_contain {
+  h1 {
+    font-size: 26px;
+    font-weight: $font-semiBold;
+    color: $whitish-blue;
+    margin-bottom: 40px;
+  }
+  .card {
+    padding: 24px;
+    border-radius: 10px;
+    background-color: $card-bg;
+    h2 {
+      font-size: 20px;
+      font-weight: $font-semiBold;
+      color: $whitish-blue;
+      margin-bottom: 24px;
+    }
+    .normal_form {
+      .inputfld {
+        border-color: $dark-input;
+      }
+      .textareafld {
+        min-height: 140px;
+      }
+    }
+    &.upload_card {
+      margin-top: 24px;
+      .image_upload {
+        border-radius: 10px;
+        border: 2px dashed #464963;
+        display: flex;
+        padding: 60px 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        @media (max-width: 768px) {
+            width: 100%;
+            max-width: 100%;
+        }
+        img {
+          display: flex;
+          width: 40px;
+          width: 40px;
+          height: 40px;
+          align-items: center;
+          gap: 14px;
+        }
+        h6 {
+          color: var(--Primary-text, #D7D8ED);
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        .or {
+          font-size: 16px;
+          color: $light-gray;
+        }
+        .blue_b_btn {
+          border-radius: 10px;
+          border: 1px solid #666CFF;
+          color: #666CFF;
+          padding: 10px 22px;
+          
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+    }
+    &.tag_card {
+      .tag_box {
+        display: flex;
+        gap: 12px;
+        flex-flow: wrap;
+        .checkbox.checkbox_field {
+          display: table;
+          position: relative;
+          &:last-child {
+            margin-bottom: 0px;
+          }
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            &:checked ~ .checkbox__body {
+              background-color: $sm-pink;
+              color: $white;
+              font-size: 16px;
+              @media (max-width: 992px) {
+                font-size: 14px;
+              }
+            }
+          }
+          .checkbox__body {
+            color: $white;
+            font-size: 16px;
+            font-weight: $font-medium;
+            background-color: $Dark-blue-grey;
+            padding: 10px 24px;
+            border-radius: 50px;
+            @media (max-width: 992px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      &.data_type {
+        margin-top: 24px;
+      }
+    }
+    #advance_box {
+      #form_control {
+        padding: 15px;
+        height: auto;
+        color: $white;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 10px;
+        border: 1px solid #595B75;
+        background-color: transparent;
+      }
+      option {
+        background: #000;
+        padding: 5px;
+        font-size: 14px;
+      }
+      option:hover {
+        background: #000;
+        padding: 5px;
+        font-size: 14px;
+      }
+      ::placeholder {
+        color: $white;
+      }
+    }
+  }
+  .card_bottom {
+    position: relative;
+    @media (max-width: 992px) {
+      margin-top: 24px;
+    }
+    &::after {
+      content: "";
+      width: 195px;
+      height: 276px;
+      position: absolute;
+      right: 55px;
+      bottom: 0;
+      background: url(../../public/assets/images/restriction_img.png);
+      background-repeat: no-repeat;
+      @media (min-width: 1400px) {
+        right: 175px;
+      }
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+    .checkbox.checkbox_field {
+      display: table;
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkbox__checkmark {
+          background-color: $green;
+          border: none;
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover input {
+        ~ .checkbox__checkmark {
+          background-color: transparent;
+        }
+    
+        &:checked ~ .checkbox__checkmark {
+          background-color: $green;
+          border: none;
+        }
+      }
+      .checkbox__checkmark {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border: solid 1px $light-grayblue;
+        transition: background-color 0.25s ease;
+        border-radius: 6px;
+    
+        &:after {
+          content: "";
+          position: absolute;
+          left: 8px;
+          top: 4px;
+          width: 5px;
+          height: 10px;
+          border: solid $card-bg;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: opacity 0.25s ease;
+        }
+      }
+      .checkbox__body {
+          font-size: 16px;
+          color: $light-grayblue;
+          @media (max-width: 992px) {
+            font-size: 14px;
+          }
+      }
+    }
+  }
+  .footer_btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    @media (max-width: 767px) {
+      gap: 18px;
+    }
+    .primary_btn {
+      font-size: 16px;
+      font-weight: $font-semiBold;
+      border-radius: 10px;
+      padding: 9px 35px;
+      @media (max-width: 767px) {
+        font-size: 14px;
+        padding: 9px 24px;
+      }
+    }
+  }
+}
+
+  
+
+
+

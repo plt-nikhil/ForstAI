@@ -1,0 +1,375 @@
+@import "../../styles/Variables/Variables.scss";
+
+.sign_wrapper {
+    background-color: $mainBg;
+
+    // height: 100vh;
+    .sign_left_contain {
+        background-color: $secondary-dark;
+        text-align: center;
+        position: relative;
+        clip-path: polygon(0% 0, 100% 0, 90% 100%, 0% 100%);
+        padding: 50px 0px;
+
+        @media (min-height: 1000px) {
+            padding: 0px;
+            height: 100vh;
+        }
+
+        @media (max-height: 999px) {
+            padding: 100px 0px;
+        }
+
+        @media (max-height: 650px) {
+            padding: 50px 0px;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+            padding: 0px;
+            height: 100vh;
+        }
+
+        @media (min-width: 1400px) {
+            padding: 0px;
+            height: 100vh;
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        .sign_left_inner {
+            width: 70%;
+            margin: auto;
+            left: 0;
+            right: 0;
+
+            @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                width: 50%;
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+
+            // transform: translateY(2%);
+            @media (min-width: 1400px) {
+                width: 50%;
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+
+            @media (max-width: 1024px) {
+                // transform: translateY(30%);
+            }
+
+            @media (max-width: 992px) {
+                width: 80%;
+                // transform: translateY(30%);
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+                color: $white;
+                margin: 14px 0px 60px 0px;
+
+                @media (max-width: 992px) {
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin: 14px 0px 20px 0px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: revert-layer;
+            }
+        }
+    }
+
+    .sign_right_contain {
+        position: relative;
+        padding: 80px 0px 50px 0px;
+        @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+            padding: 0px;
+            height: 100vh;
+        }
+
+        @media (min-width: 1400px) {
+            padding: 0px;
+            height: 100vh;
+        }
+
+        @media (max-width: 767px) {
+            position: unset;
+        }
+
+        .sign_right_inner {
+            width: 100%;
+            margin: auto;
+            left: 0;
+            right: 0;
+            padding: 0px 15px;
+
+            // transform: translateY(20%);
+            @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                width: 100%;
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+            @media (min-width: 1400px) {
+                width: 100%;
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+
+            @media (max-width: 1024px) {
+                // transform: translateY(40%);
+            }
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
+
+            @media (max-width: 767px) {
+                // transform: translateY(20%);
+            }
+
+            h1 {
+                font-size: 26px;
+                font-weight: $font-semiBold;
+                color: $white;
+                margin-bottom: 12px;
+                text-align: center;
+                @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                    font-size: 22px;
+                }
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                font-weight: normal;
+                color: $light-grayblue;
+                text-align: center;
+                margin-bottom: 0px;
+                line-height: normal;
+                
+                @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                    font-size: 14px;
+                }
+                @media (max-width: 992px) {
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin: 14px 0px 20px 0px;
+                }
+            }
+
+            .signIn_form {
+                max-width: 387px;
+                margin: 44px auto 0px;
+                @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                    margin: 20px auto 0px;
+                }
+                .form_group {
+                    margin-bottom: 24px;
+                    position: relative;
+                    @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                        margin-bottom: 15px;
+                    }
+
+                    label {
+                        font-size: 14px;
+                        color: $white;
+                        margin-bottom: 10px;
+                        display: block;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    .inputField {
+                        width: 100%;
+                        height: 55px;
+                        padding: 17px 20px;
+                        border-radius: 10px;
+                        box-shadow: none;
+                        border: none;
+                        color: $white;
+                        background-color: $input-black;
+                        @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                            height: 44px;
+                            padding: 10px 15px;
+                            border-radius: 6px;
+                        }
+                        &:focus-visible {
+                            outline: none;
+                        }
+
+                        &::placeholder {
+                            color: #999;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+
+                        &.inputField_password {
+                            padding-right: 50px;
+                        }
+                    }
+
+                    .eye_btn {
+                        background-image: url(../../public/assets/images/closed-eye.svg);
+                        background-repeat: no-repeat;
+                        width: 41px;
+                        height: 19px;
+                        position: absolute;
+                        right: 0px;
+                        bottom: 18px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .eye_open_btn {
+                        background-image: url(../../public/assets/images/open_eye.svg);
+                        background-repeat: no-repeat;
+                        width: 41px;
+                        height: 19px;
+                        position: absolute;
+                        right: 0px;
+                        bottom: 18px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .remember {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 40px;
+                    @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                        margin-bottom: 30px;
+                    }
+                    a {
+                        color: $pink;
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-weight: $font-medium;
+
+                        &:hover {
+                            color: $hover_pink;
+                        }
+                    }
+
+                    .checkbox.checkbox_field {
+                        display: inline-block;
+                        position: relative;
+                        padding-left: 30px;
+                        cursor: pointer;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0;
+
+                            &:checked~.checkbox__checkmark {
+                                background-color: $pink;
+
+                                &:after {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        &:hover input {
+                            ~.checkbox__checkmark {
+                                background-color: $input-black;
+                            }
+
+                            &:checked~.checkbox__checkmark {
+                                background-color: $pink;
+                            }
+                        }
+
+                        .checkbox__checkmark {
+                            position: absolute;
+                            top: 1px;
+                            left: 0;
+                            height: 20px;
+                            width: 20px;
+                            background-color: $input-black;
+                            transition: background-color 0.25s ease;
+                            border-radius: 6px;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                left: 8px;
+                                top: 4px;
+                                width: 5px;
+                                height: 10px;
+                                border: solid $white;
+                                border-width: 0 2px 2px 0;
+                                transform: rotate(45deg);
+                                opacity: 0;
+                                transition: opacity 0.25s ease;
+                            }
+                        }
+
+                        .checkbox__body {
+                            font-size: 14px;
+                            color: $white;
+                        }
+                    }
+                }
+
+                .signIn_btn {
+                    width: 100%;
+                    height: 56px;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-in;
+                    @media only screen and (min-width: 768px) and (max-width: 1399px)  {
+                        height: 42px;
+                    }
+                    &:hover {
+                        transform: translateY(-3px);
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-out;
+                    }
+                }
+            }
+
+            .sign_up_text {
+                margin-top: 20px;
+                color: $white;
+            }
+
+            .sign_up_link {
+                color: $pink;
+                &:hover {
+                    color: $hover_pink;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import "../../styles/Variables/Variables.scss";
+
+.sidebar {
+    background-color: #282A42;
+    height: 100vh;
+    width: 260px;
+    will-change: auto;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 13333;
+    .menuline
+    {
+        border-top: solid 1px  rgba(61, 64, 91, 0.50);;
+    margin: 17px 0px;
+
+    }
+    .navbar_head {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        position: relative;
+        align-items: center;
+        padding: 6px;
+        img {
+            width: 160px;
+        }
+
+     #logosmalmenu_hide
+     {
+        display: none;
+     }
+
+        button {
+            background-image: url(../../public/assets/images/menuclose.svg);
+            right: 5px;
+            top: 18px;
+            height: 34px;
+            width: 34px;
+            padding-right: 0px;
+            background-repeat: no-repeat;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+/* 
+scss
+ */
+.primary_btn {
+  background-image: linear-gradient(to right, #33337B, #BD48D4);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+  border-radius: 6px;
+}
+.primary_btn:hover {
+  background-image: linear-gradient(to right, #26267c, #b32cce);
+}
+
+.sm_pink_btn {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #AE46CA;
+  padding: 8px 24px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: none;
+  display: inline-block;
+}
+
+.delete_btn {
+  color: #FF4D49;
+  border: solid 1px #FF4D49;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 9px 32px;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .delete_btn {
+    font-size: 14px;
+    padding: 9px 24px;
+  }
+}
+.delete_btn:hover {
+  background-color: #FF4D49;
+  color: #fff;
+}
+
+.secondary_btn {
+  color: #6D788D;
+  border: solid 1px #6D788D;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 9px 32px;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .secondary_btn {
+    font-size: 14px;
+    padding: 9px 24px;
+  }
+}
+.secondary_btn:hover {
+  background-color: #6D788D;
+  color: #fff;
+}
+
+.normal_form {
+  margin-bottom: 24px;
+}
+.normal_form:last-child {
+  margin-bottom: 0px;
+}
+.normal_form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #D7D8ED;
+  margin-bottom: 8px;
+  display: block;
+}
+.normal_form .inputfld {
+  width: 100%;
+  border-radius: 10px;
+  height: 56px;
+  background-color: transparent;
+  border: solid 1px #6D788D;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px;
+}
+.normal_form .inputfld:focus-visible {
+  outline: none;
+}
+.normal_form.numInputfld {
+  position: relative;
+}
+.normal_form.numInputfld::before {
+  content: "$";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 45px;
+  left: 24px;
+  color: #fff;
+}
+.normal_form.numInputfld .inputfld {
+  padding-left: 40px;
+}
+
+.inputfld::-moz-placeholder {
+  color: #7B7C95 !important;
+}
+
+.inputfld::placeholder {
+  color: #7B7C95 !important;
+}/*# sourceMappingURL=Variables.css.map */

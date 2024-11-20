@@ -1,0 +1,231 @@
+@import "../../../styles/Variables/Variables.scss";
+
+.workslicense_contain {
+  h1 {
+    font-size: 24px;
+    font-weight: $font-semiBold;
+    color: $whitish-blue;
+    margin-bottom: 30px;
+  }
+  .card {
+    padding: 0px;
+    border-radius: 10px;
+    background-color: $card-bg;
+    .card_inner {
+      padding: 20px;
+      .remove_px {
+        padding: 0px;
+      }
+    }
+    .check_inner{
+      padding-left: 30px;
+    }
+    .searchtable {
+      padding-bottom: 30px;
+      .cart_btn {
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+    }
+    .search {
+      background: none;
+      color: $white;
+      font-size: 14px;
+      position: relative;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 0px;
+      position: relative;
+      margin-bottom: 10px;
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: url(../../../public/assets/images/search.svg) no-repeat left;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 20px;
+        top: 16px;
+      }
+      &::placeholder {
+          font-size: 14px;
+          font-weight: $font-regular;
+          color: $table-arrow-gray;
+      }
+      &:focus-visible {
+          outline: none;
+      }
+      &.normal_form {
+        width: 100%;
+        .inputfld {
+          border-color: $dark-input;
+          height: 48px;
+          border-radius: 6px;
+          padding: 5px 10px 5px 50px;
+          font-size: 14px;
+        }
+      }
+    }
+    .light_card {
+      background-color: $nav_bg;
+      padding: 20px;
+      border-radius: 10px;
+      &.light_card_side {
+        height: 100%;
+      }
+      .filter_list {
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+      .filter_list_flex {
+        display: flex;
+        flex-wrap: wrap;
+        .filter_list {
+          min-width: 20%;
+          margin-right: 15px;
+        }
+      }
+      &.assets_type {
+        padding-bottom: 0px;
+      }
+      &.parameters_list {
+        margin-top: 10px;
+        padding-bottom: 14px;
+        h2 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: $font-semiBold;
+      color: $whitish-blue;
+      margin-bottom: 15px;
+    }
+    .primary_btn {
+      border-radius: 6px;
+      padding: 10px 36px;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    .checkbox.checkbox_field {
+      display: table;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkbox__checkmark {
+          background-color: $green;
+          border: none;
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover input {
+        ~ .checkbox__checkmark {
+          background-color: $Dark-blue-grey;
+        }
+    
+        &:checked ~ .checkbox__checkmark {
+          background-color: $green;
+          border: none;
+        }
+      }
+      .checkbox__checkmark {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border: solid 1px $light-grayblue;
+        background-color: transparent;
+        transition: background-color 0.25s ease;
+        border-radius: 6px;
+    
+        &:after {
+          content: "";
+          position: absolute;
+          left: 8px;
+          top: 4px;
+          width: 5px;
+          height: 10px;
+          border: solid $card-bg;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: opacity 0.25s ease;
+        }
+      }
+      .checkbox__body {
+          font-size: 14px;
+          color: $light-grayblue;
+          @media (max-width: 992px) {
+            font-size: 14px;
+          }
+      }
+    }
+    &.payments_summary {
+      padding: 20px;
+      margin-top: 20px;
+      .payments_summary_inner {
+        border-radius: 6px;
+        background-color: $card_inner_gray;
+        padding: 20px;
+        .summary_details {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          .summary_text {
+            font-size: 14px;
+            font-weight: $font-medium;
+            color: $white;
+          }
+          .summary_amount {
+            font-size: 18px;
+            font-weight: $font-semiBold;
+            color: $blue_fill_btn;
+          }
+        }
+        .total_box {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 5px;
+          border-top: solid 1px $smcard-border;
+          padding-top: 15px;
+          .total_text {
+            font-size: 16px;
+            font-weight: $font-medium;
+            color: $white;
+          }
+          .total_amount {
+            font-size: 20px;
+            font-weight: $font-semiBold;
+            color: $text_dark_pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+  
+
+
+

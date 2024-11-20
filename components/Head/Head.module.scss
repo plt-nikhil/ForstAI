@@ -1,0 +1,182 @@
+@import "../../styles/Variables/Variables.scss";
+
+.header {
+    display: inline-block;
+    justify-content: space-between;
+    padding: 15px 0px;
+    align-items: center;
+    width: 100%;
+
+
+    .had_left {
+        min-width: 300px;
+
+        .search {
+            background: none;
+            color: $white;
+            font-size: 14px;
+            position: relative;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            background: url(../../public/assets/images/search.svg) no-repeat left;
+            padding: 10px 10px 10px 30px;
+
+            &::placeholder {
+                font-size: 14px;
+                font-weight: $font-regular;
+                color: $table-arrow-gray;
+            }
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    }
+
+    .had_right {
+        white-space: nowrap;
+        /* display: flex; */
+        /* gap: 30px; */
+        /* align-items: center; */
+        float: right;
+
+        .user_name {
+            padding-left: 15px;
+            position: relative;
+            padding-right: 28px;
+            ::after {
+                content: '';
+                background: url(../../public/assets/images/droparrow.svg) no-repeat;
+                position: absolute;
+                width: 16px;
+                height: 8px;
+                right: -1px;
+                top: 7px;
+                background-size: cover;
+            }
+        }
+
+        .notification {
+            width: 56px;
+            height: 56px;
+            border-radius: 50px;
+            padding: 13px;
+            background-color: $notific-bg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .notidic_count {
+                width: 26px;
+                height: 26px;
+                border-radius: 50px;
+                color: $white;
+                font-size: 14px;
+                font-weight: $font-semiBold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $card-bg;
+                position: absolute;
+                right: -6px;
+                top: -7px;
+            }
+        }
+
+        .Toggle_button {
+            position: relative;
+            top: 50%;
+            width: 165px;
+            height: 33px;
+            overflow: hidden;
+            border-radius: 65px;
+            background-color: $nav_bg;
+            padding: 3px 4px;
+
+            .checkbox {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                opacity: 0;
+                cursor: pointer;
+                z-index: 3;
+
+                &:checked {
+                    &+.knobs {
+                        span {
+                            left: 4px;
+                            background-color: $pink;
+                        }
+                    }
+
+                    &~.layer {
+                        background-color: #fcebeb;
+                    }
+                }
+            }
+
+            .knobs::before,
+            .knobs::after,
+            .knobs span {
+                position: absolute;
+                top: 3px;
+                width: 20px;
+                height: 10px;
+                font-size: 12px;
+                color: $light-grayblue;
+                font-weight: $font-regular;
+                text-align: center;
+                line-height: 1;
+                padding: 9px 4px;
+                border-radius: 2px;
+                transition: 0.3s ease all;
+            }
+
+            .knobs {
+                &::before {
+                    content: "Sell";
+                    left: 24px;
+                    top: 2px;
+                }
+
+                &::after {
+                    content: "Buy";
+                    right: 37px;
+                    top: 2px;
+                }
+
+                span {
+                    width: 80px;
+                    height: 27px;
+                    left: 82px;
+                    background-color: #666CFF;
+                    background-color: $pink;
+                    border-radius: 50px;
+                }
+            }
+
+            .knobs::before,
+            .knobs::after {
+                color: $light-grayblue;
+                z-index: 1;
+            }
+
+            .checkbox:checked+.knobs::before,
+            .checkbox:not(:checked)+.knobs::after {
+                color: #fff;
+                font-weight: $font-semiBold;
+            }
+        }
+
+        .profile_drpdwn {
+            font-size: 14px;
+            padding: 5px 0px;
+            border-radius: 3px;
+        }
+
+    }
+}

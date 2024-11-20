@@ -1,0 +1,401 @@
+@import "../../styles/Variables/Variables.scss";
+
+.owned_details_wrapper {
+  background-color: $mainBg;
+
+  h3 {
+    color: var(--Primary-text, #D7D8ED);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 25px;
+  }
+
+  .card {
+    background-color: $card-bg;
+    padding: 24px;
+    border-radius: 10px;
+    height: 100%;
+
+    &.card_top {
+      @media (max-width: 767px) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .card_img {
+      img {
+        width: 100%;
+        height: auto;
+        min-height: 222px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+
+    .card_details {
+      margin-top: 24px;
+
+      span {
+        font-size: 18px;
+        font-weight: $font-medium;
+        color: $light-grayblue;
+        margin-bottom: 10px !important;
+        display: block;
+
+        @media (max-width: 992px) {
+          font-size: 16px;
+        }
+      }
+
+      h4 {
+        font-weight: $font-medium;
+        color: $light-grayblue;
+        margin-bottom: 14px;
+        font-size: 24px;
+        font-style: normal;
+        margin-bottom: 0;
+
+        @media (max-width: 992px) {
+          font-size: 16px;
+        }
+      }
+
+    }
+
+    .box_contain {
+      display: flex;
+      gap: 24px;
+      flex-flow: column;
+      margin: 24px 0px;
+
+      @media (min-width: 992px) {
+        display: flex;
+        gap: 24px;
+        flex-flow: row;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+
+    .card_bottom {
+      margin-top: 24px;
+
+      .checkbox.checkbox_field {
+        display: table;
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+
+          &:checked~.checkbox__checkmark {
+            background-color: $green;
+
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+
+        &:hover input {
+          ~.checkbox__checkmark {
+            background-color: $Dark-blue-grey;
+          }
+
+          &:checked~.checkbox__checkmark {
+            background-color: $green;
+          }
+        }
+
+        .checkbox__checkmark {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          background-color: $Dark-blue-grey;
+          transition: background-color 0.25s ease;
+          border-radius: 6px;
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid $card-bg;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+          }
+        }
+
+        .checkbox__body {
+          font-size: 16px;
+          color: $light-grayblue;
+
+          @media (max-width: 992px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .result_details {
+    height: 100%;
+    display: grid;
+    gap: 24px;
+
+    @media (max-width: 767px) {
+      margin-top: 24px;
+    }
+
+    .result_details_box {
+      display: flex;
+      gap: 24px;
+
+      @media (max-width: 767px) {
+        display: block;
+        width: 100%;
+      }
+
+      .result_details_box_inr {
+
+        border-radius: 10px;
+        background: var(--Card-Color, #30334E);
+        padding: 15px;
+        width: 50%;
+
+        @media (max-width: 767px) {
+          display: block;
+          width: 100%;
+          margin-bottom: 24px;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+
+        h4 {
+          color: var(--Primary-text, #D7D8ED);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          margin-bottom: 24px;
+          display: block;
+        }
+
+        .result_details_box_bt {
+          border-radius: 50px;
+          background: #AE46CA;
+          display: flex;
+          height: 40px;
+          padding: 10px 24px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          color: var(--white, #FFF);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        p {
+          color: var(--white, #FFF);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+        }
+      }
+
+      #w_100 {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .search_details_form {
+    border-radius: 10px;
+    padding: 20px 20px 0px;
+    background: var(--Card-Color, #30334E);
+
+    h4 {
+      color: var(--Primary-text, #D7D8ED);
+      
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 24px;
+    }
+
+    .normal_form {
+
+      label {
+        color: var(--Primary-text, #D7D8ED);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      #form_control {
+        color: var(--white, #FFF);
+        font-size: 16px;
+        border-radius: 10px;
+        border: 1px solid #595B75;
+        font-style: normal;
+        background: none;
+        font-weight: 400;
+        padding: 18px 24px;
+        line-height: normal;
+      }
+
+      ::placeholder {
+        color: #acacac;
+      }
+    }
+  }
+
+  .card_bottom {
+
+
+    h2 {
+      color: var(--Primary-text, #D7D8ED);
+      
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .checkbox.checkbox_field {
+      display: table;
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked~.checkbox__checkmark {
+          background-color: $green;
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:hover input {
+        ~.checkbox__checkmark {
+          background-color: $Dark-blue-grey;
+        }
+
+        &:checked~.checkbox__checkmark {
+          background-color: $green;
+        }
+      }
+
+      .checkbox__checkmark {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: $Dark-blue-grey;
+        transition: background-color 0.25s ease;
+        border-radius: 6px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 8px;
+          top: 4px;
+          width: 5px;
+          height: 10px;
+          border: solid $card-bg;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: opacity 0.25s ease;
+        }
+      }
+
+      .checkbox__body {
+        font-size: 16px;
+        color: $light-grayblue;
+
+        @media (max-width: 992px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .footer_btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+
+    @media (max-width: 767px) {
+      gap: 18px;
+    }
+
+    .primary_btn {
+      font-size: 16px;
+      font-weight: $font-semiBold;
+      border-radius: 10px;
+      padding: 9px 67px;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+        padding: 9px 24px;
+      }
+    }
+  }
+}

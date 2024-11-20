@@ -1,0 +1,187 @@
+@import "../../styles/Variables/Variables.scss";
+.table_wrapper {
+  position: relative;
+  .checkbox.checkbox_field {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .checkbox__checkmark {
+        background-color: $green;
+        border: none;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    &:hover input {
+      ~ .checkbox__checkmark {
+        background-color: transparent;
+      }
+  
+      &:checked ~ .checkbox__checkmark {
+        background-color: $green;
+      }
+    }
+    .checkbox__checkmark {
+      position: absolute;
+      top: -14px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: transparent;
+      transition: background-color 0.25s ease;
+      border-radius: 6px;
+      border: solid 1px $light-grayblue; 
+  
+      &:after {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid $Dark-blue-grey;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+    }
+  }
+  .pagination {
+    position: absolute;
+    right: 50px;
+    top: -47px;
+    display: flex;
+    font-size: 16px;
+    color: $light-grayblue;
+    .count {
+      display: flex;
+      margin-right: 50px;
+      color: $light-grayblue;
+      .list_count {
+        margin-right: 5px;
+      }
+      .total_count {
+        margin-left: 5px;
+      }
+    }
+    .pagination_btn {
+      display: flex;
+      gap: 40px;
+      .prev_btn, .next_btn {
+        svg {
+          path {
+            fill: $table-arrow-gray;
+          }
+        }
+        &:hover {
+          svg {
+            path {
+              fill: $whitish-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  .table_head {
+    margin-top: 24px;
+    h2 {
+      font-size: 18px !important;
+      font-weight: $font-semiBold;
+      margin-bottom: 26px !important;
+      padding-left: 20px;
+    }
+  }
+  &.purchase_table {
+    display: grid;
+    h2 {
+      font-weight: $font-regular;
+      span {
+        color: $text_dark_pink;
+        font-weight: $font-semiBold;
+      }
+    }
+  }
+}
+
+.search_custom {
+  height: 380px;
+  overflow: hidden;
+  padding-right: 5px;
+  margin-right: 5px;
+  @media only screen and (min-width: 1200px) and (max-width: 1399px)  {
+    height: 200px;
+  }
+  .tbl_des {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+
+
+.custom_tbl_body {
+  height: 400px;
+  overflow-x: auto;
+}
+
+.custom_tbl_body::-webkit-scrollbar {
+  width: 2px;
+  position: relative;
+}
+ 
+.custom_tbl_body::-webkit-scrollbar-track {
+  background-color: $smcard-border;
+  box-shadow: none;
+  padding-right: 20px;
+}
+ 
+.custom_tbl_body::-webkit-scrollbar-thumb {
+  background-color: $Primary-text;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.primary_btn {
+  border-radius: 6px;
+  padding: 10px 65px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.cart_btn {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.custom_tbl {
+  width: 100%;
+  table-layout: fixed;
+  border: none;
+  margin: 0px;
+  tr {
+    position: relative;
+    border: none;
+  }
+}
+
+  
+
+
+

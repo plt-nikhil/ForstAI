@@ -1,0 +1,2 @@
+# Frontend
+ForstAI is an innovative business platform designed for creating, sharing, and monetizing generative AI-generated imagery and videos, while ensuring fair royalties for creators' copyrighted works and likenesses.

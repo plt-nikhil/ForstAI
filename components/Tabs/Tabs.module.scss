@@ -1,0 +1,329 @@
+@import "../../styles/Variables/Variables.scss";
+
+.custom_tab {
+  .tabs_container {
+    margin-bottom: 15px;
+    border: none;
+    li {
+      button {
+        font-size: 14px;
+        font-weight: $font-semiBold;
+        color: $whitish-blue;
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
+        .tab_nav {
+          display: flex;
+          align-items: center;
+          .icon {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+  .tab_content {
+    display: flex;
+    gap: 24px;
+    flex-flow: column;
+    .tab_content_inner {
+      background-color: #30334E;
+      border-radius: 10px;
+      padding: 14px;
+      .profile_area {
+        display: flex;
+        margin-bottom: 20px;
+        .profile_pic {
+          width: 100px;
+          height: 100px;
+          border-radius: 10px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .profile_upload {
+          padding-left: 15px;
+          .primary_btn {
+            font-size: 14px;
+            padding: 11px 23px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            @media (max-width: 767px) {
+              padding: 7px 18px;
+              font-size: 14px;
+              margin-bottom: 14px;
+            }
+          }
+          span {
+            display: block;
+            font-size: 12px;
+            color: $light-grayblue;
+            @media (max-width: 767px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .profile_form {
+        .normal_form {
+          margin-bottom: 20px;
+          .inputfld {
+            border-color: $dark-input;
+            font-size: 14px;
+            border-radius: 6px;
+            height: 48px;
+          }
+        }
+        .footer_btn {
+          margin-top: 0px;
+          display: flex;
+          justify-content: flex-end;
+          gap: 15px;
+          @media (max-width: 767px) {
+            gap: 18px;
+          }
+          .secondary_btn {
+            font-size: 14px;
+            padding: 10px 36px;
+            border-radius: 6px;
+          }
+          .primary_btn {
+            font-size: 14px;
+            font-weight: $font-semiBold;
+            border-radius: 6px;
+            padding: 9px 33px;
+            @media (max-width: 767px) {
+              font-size: 14px;
+              padding: 9px 24px;
+            }
+          }
+        }
+      }
+      h2 {
+        font-size: 18px;
+        font-weight: $font-semiBold;
+        color: $whitish-blue;
+        margin-bottom: 20px;
+        @media (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+      .warning_box {
+        border-radius: 6px;
+        padding: 15px;
+        background-color: $light-brown;
+        h6 {
+          font-size: 14px;
+          font-weight: $font-semiBold;
+          color: $yellow;
+          margin-bottom: 10px;
+          @media (max-width: 767px) {
+            font-size: 14px;
+          }
+        }
+        p {
+          font-size: 14px;
+          margin: 0px;
+          color: $yellow;
+          @media (max-width: 767px) {
+            font-size: 14px;
+          }
+        }
+      }
+      .checkbox.checkbox_field {
+        display: inline-block;
+        position: relative;
+        padding-left: 30px;
+        margin: 15px 0px 30px 0px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+          &:checked ~ .checkbox__checkmark {
+            background-color: $input-black;
+            border: none;
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+        &:hover input {
+          ~ .checkbox__checkmark {
+            background-color: transparent;
+          }
+      
+          &:checked ~ .checkbox__checkmark {
+            background-color: $input-black;
+            border: none;
+          }
+        }
+        .checkbox__checkmark {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          transition: background-color 0.25s ease;
+          border-radius: 6px;
+          border: solid 1px $light-grayblue;
+      
+          &:after {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid $white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+          }
+        }
+        .checkbox__body {
+            font-size: 14px;
+            color: $whitish-blue;
+        }
+      }
+      .del_btn {
+        font-size: 14px;
+        font-weight: $font-semiBold;
+        color: $white;
+        border-radius: 6px;
+        padding: 11px 23px;
+        background-color: $delete-red;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        @media (max-width: 767px) {
+          font-size: 14px;
+          padding: 9px 24px;
+        }
+      }
+      .normal_form_pswd {
+        margin-bottom: 20px;
+        position: relative;
+        label {
+            font-size: 14px;
+            font-weight: $font-semiBold;
+            color: $white;
+            margin-bottom: 10px;
+            display: block
+        }
+        .inputField {
+          width: 100%;
+          height: 55px;
+          padding: 17px 20px;
+          border-radius: 10px;
+          box-shadow: none;
+          border: none;
+          color: $white;
+          background-color: $input-black;
+          &:focus-visible {
+              outline: none;
+          }
+          &::placeholder {
+            color: $light-gray;
+            font-size: 16px;
+          }
+          &.inputField_password {
+            padding-right: 50px;
+          }
+        }
+        .inputfld {
+          padding: 18px 70px 18px 15px;
+          height: 48px;
+          border-radius: 6px;
+          font-size: 14px;
+        }
+        .eye_btn {
+            background-image: url(../../public/assets/images/pswd_eye.svg);
+            background-repeat: no-repeat;
+            width: 41px;
+            height: 25px;
+            position: absolute;
+            right: 8px;
+            bottom: 13px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+      }
+      .pswd_req {
+        margin-top: 0px;
+        h4 {
+          font-size: 16px;
+          font-weight: $font-semiBold;
+          color: $whitish-blue;
+          margin-bottom: 15px;
+          @media (max-width: 767px) {
+            font-size: 16px;
+            margin-bottom: 14px;
+          }
+        }
+        ul {
+          li {
+            font-size: 14px;
+            color: $light-grayblue;
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            @media (max-width: 767px) {
+              font-size: 14px;
+              margin-bottom: 14px;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 8px;
+              width: 8px;
+              height: 8px;
+              background-color: $light-grayblue;
+              border-radius: 50px
+            }
+          }
+        }
+      }
+      .footer_Pswd {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        @media (max-width: 767px) {
+          gap: 18px;
+        }
+        .secondary_btn {
+          font-size: 14px;
+          border-radius: 6px;
+          padding: 10px 36px;
+        }
+        .primary_btn {
+          font-size: 14px;
+          font-weight: $font-semiBold;
+          border-radius: 6px;
+          padding: 10px 33px;
+          @media (max-width: 767px) {
+            font-size: 14px;
+            padding: 9px 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+  
+
+

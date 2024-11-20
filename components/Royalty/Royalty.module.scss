@@ -1,0 +1,295 @@
+@import "../../styles/Variables/Variables.scss";
+
+.royalty {
+
+    h4 {
+        color: $Primary-text;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .royalty_outer {
+        margin-top: 23px;
+
+        .Royalty_left {
+
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #30334E;
+            height: 100%;
+
+            @media (max-width: 992px) {
+                display: block;
+            }
+
+            img {
+                border-radius: 12px;
+                max-width: 50%;
+                object-fit: cover;
+            }
+
+            .Royalty_left_cnt {
+
+                @media (max-width: 992px) {
+                    margin-top: 20px;
+                }
+
+                h3 {
+                    color: var(--Primary-text, #D7D8ED);
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-bottom: 24px;
+                }
+
+                h4 {
+                    color: var(--Secondary-Text, #B2B3CA);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    color: var(--white, #FFF);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                ul {
+                    margin-top: 24px;
+                    display: inline-block;
+
+                    li {
+                        color: var(--Secondary-Text, #B2B3CA);
+                        
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        width: calc(100% / 2);
+                        float: left;
+                        padding-right: 20px;
+                        margin-bottom: 24px;
+                        @media (max-width: 1200px) {
+                        width: 100%;
+                        }
+
+                        span {
+
+                            color: var(--white, #FFF);
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            width: 100%;
+                            display: block;
+                            padding-top: 11px;
+                        }
+                    }
+                }
+            }
+
+            .card_dash_box_r {
+                color: var(--white, #FFF);
+                
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-top: 35px;
+                gap: 10px;
+                display: flex;
+
+                .blue_btn {
+                    border-radius: 10px;
+                    background: linear-gradient(90deg, #33337B 0%, #BD48D4 100%);
+                    display: flex;
+                    max-width: 180px;
+                    width: 100%;
+                    padding: 12px 5px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    color: var(--white, #FFF);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+
+                .blue_b_btn {
+                    color: #6D788D;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    width: 100%;
+                    line-height: normal;
+                    border-radius: 10px;
+                    border: 1px solid #6D788D;
+                    display: flex;
+                    max-width: 180px;
+                    padding: 12px 5px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+
+        .Royalty_right {
+            padding: 20px;
+            border-radius: 10px;
+            background: #30334E;
+            height: 100%;
+
+            h3 {
+                color: var(--Primary-text, #D7D8ED);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 24px;
+            }
+
+            .royalty_r_box {
+                display: grid;
+                align-items: center;
+                gap: 20px;
+
+
+                .Royalty_right_decription {
+                    border-radius: 10px;
+                    border: 2px solid #54587D;
+                    background: #3B3E59;
+                    padding: 15px;
+
+                    h6 {
+                        color: var(--Secondary-Text, #B2B3CA);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin-bottom: 24px;
+                    }
+
+                    #form_control {
+                        color: var(--Primary-text, #D7D8ED);
+                        
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        padding: 0 !important;
+                        line-height: normal;
+                        background: none;
+                        border: none;
+                        box-shadow: none;
+                    }
+
+                    ::placeholder {
+                        color: #D7D8ED;
+                    }
+
+
+                }
+
+                .Royalty_right_or {
+                    border-radius: 25px;
+                    background: #3B3E59;
+                    display: flex;
+                    width: 40px;
+                    height: 40px !important;
+                    padding: 16px;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--Primary-text, #D7D8ED);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin: auto;
+
+                }
+
+                .image_upload {
+                    border-radius: 10px;
+                    border: 2px dashed #464963;
+                    display: flex;
+                    width: 100%;
+                    padding: 20px 12px;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 14px;
+
+                    @media (max-width: 768px) {
+
+                        width: 100%;
+                        max-width: 100%;
+                    }
+
+                    img {
+                        display: flex;
+                        width: 40px;
+                        width: 40px;
+                        height: 40px;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    h6 {
+                        color: var(--Primary-text, #D7D8ED);
+                        text-align: center;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+
+                    .blue_b_btn {
+                        border-radius: 10px;
+                        border: 1px solid #666CFF;
+                        color: #666CFF;
+                        padding: 10px 22px;
+                        
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+
+                .card_dash_box_r {
+                    margin-top: 9px;
+                    text-align: center;
+
+                    .blue_btn {
+                        border-radius: 10px;
+                        background: linear-gradient(90deg, #33337B 0%, #BD48D4 100%);
+                        max-width: 180px;
+                        width: 100%;
+                        padding: 12px 5px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        color: var(--white, #FFF);
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+
+            }
+        }
+
+    }
+}

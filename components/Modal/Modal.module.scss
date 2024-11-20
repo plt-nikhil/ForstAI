@@ -1,0 +1,222 @@
+@import "../../styles/Variables/Variables.scss";
+
+.Modal_contain_inner {
+  .normal_form {
+    margin-bottom: 15px;
+
+    .inputfld {
+      border: solid 1px $dark-input;
+      background-color: $card-bg;
+      height: 48px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: $font-regular;
+      padding: 4px 20px;
+      margin-bottom: 6px;
+    }
+
+    &.numInputfld {
+      .inputfld {
+        padding: 4px 10px 4px 38px;
+        font-size: 14px;
+        font-weight: $font-regular;
+      }
+
+      &::before {
+        top: 43px;
+        font-size: 14px;
+        font-weight: $font-regular;
+      }
+    }
+  }
+
+  .footer_btn {
+    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+
+    @media (max-width: 767px) {
+      gap: 18px;
+    }
+
+    .secondary_btn {
+      padding: 9px 36px;
+    }
+
+    .primary_btn {
+      font-size: 16px;
+      font-weight: $font-semiBold;
+      border-radius: 10px;
+      padding: 9px 61px;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+        padding: 9px 24px;
+      }
+    }
+  }
+
+  &.generate_modal {
+    h2 {
+      font-size: 16px;
+      font-weight: $font-semiBold;
+      color: $Primary-text;
+      margin-bottom: 20px;
+    }
+
+    .modal_inner {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .profile_pic {
+        width: 200px;
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .modal_inner_json {
+      display: flex;
+      // align-items: center;
+      gap: 15px;
+
+      .profile_pic {
+        width: 200px;
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .pl_3 {
+      padding-left: 3px;
+    }
+
+    .modal_inner_left {
+      width: 80%;
+
+      &.modal_inner_box {
+        width: 100%;
+
+        .align_items_start {
+          display: flex;
+          gap: 15px;
+          padding: 6px 10px;
+          border-radius: 4px;
+          align-items: center !important;
+          margin-bottom: 10px;
+
+          .folder_name {
+            font-size: 14px;
+            color: $white;
+          }
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: $sm-pink !important;
+          }
+
+          img {
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  &.sm_modal {
+    .normal_form {
+      width: 100%;
+    }
+
+    .sm_modal_footer {
+      padding: 0px 20px 20px 20px;
+
+      .footer_btn {
+        width: 100%;
+        justify-content: space-between;
+
+        .skeletal_btn {
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 10px 25px;
+
+          &:hover {
+            background-color: $blue_fill_btn_hover;
+            border: 1px solid $blue_fill_btn_hover;
+            color: $white;
+          }
+        }
+
+        .primary_btn {
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+
+  .dark_background {
+    background-color: $dark_bluish;
+
+    &.dark_background_inner {
+      border-radius: 4px;
+    }
+  }
+
+  .skeletal_btn {
+    border-radius: 10px;
+    border: 1px solid $blue_fill_btn;
+    color: $blue_fill_btn;
+    padding: 10px 22px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .save_footer {
+    padding: 20px;
+
+    .footer_btn {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .add_btn {
+        background-color: $blue_fill_btn;
+        color: $white;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: $font-semiBold;
+        padding: 10px 25px;
+      }
+
+      .primary_btn {
+        font-size: 14px;
+        border-radius: 6px;
+        padding: 10px 30px;
+      }
+    }
+  }
+}
